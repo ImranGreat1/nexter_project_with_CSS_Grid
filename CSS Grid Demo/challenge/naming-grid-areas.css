@@ -1,0 +1,65 @@
+.container {
+    background-color: #e1e1e1;
+    width: 90%;
+    margin: 30px auto;
+
+    display: grid;
+
+    grid-template-rows: 70px 250px 400px 70px;
+    /* When we use naming in repeat, it basically create a nameset of cols. To use the first name we
+    use col-start 1 or col-end 1, using numbers incremented we use the next column lines that follow  */
+    grid-template-columns: repeat(3, 1fr) 200px;
+
+    /* To leave an empty space we use dot if not the grid items will not align properly */
+    grid-template-areas: "head head head head"
+                         "col-1 col-2 col-3 side"
+                         "main main main side"
+                         "foot foot foot foot";
+
+    /* grid-gap: 20px; */
+    gap: 20px;
+
+}
+
+.item {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    font-family: sans-serif;
+    background-color: orangered;
+    text-align: center;
+    padding: 2rem;
+
+}
+
+
+.header {
+    grid-area: head;
+}
+
+.small--1 {
+   grid-area: col-1;
+}
+
+.small--1 {
+    grid-area: col-2;
+ }
+
+ .small--1 {
+    grid-area: col-3;
+ }
+
+
+
+.side-bar {
+    grid-area: side;
+}
+
+.main {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: foot;
+}

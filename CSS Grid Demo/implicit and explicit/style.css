@@ -1,0 +1,32 @@
+.container {
+    background-color: #ddd;
+    width: 80%;
+    margin: 30px auto;
+
+    display: grid;
+    grid-template-rows: repeat(2, 150px);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    /* Dealing with implicit grid */
+    /*Row is the default but we can set it to column if our grid items are cannot fit in
+    the rows and columns we define in our container*/
+    /* grid-auto-flow: row;  */
+    grid-auto-flow: column;
+
+    /* To set the height of the rows in an implicit grid if the flow is set to row*/
+    /* grid-auto-rows: 100px; */
+    /* To set the width of the columns in an implicit grid if the flow is set to column*/
+    grid-auto-columns: 100px;
+}
+
+
+.item {
+    padding: 20px;
+    color: #fff;
+    background-color: orangered;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+}

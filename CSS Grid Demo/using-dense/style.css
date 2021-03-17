@@ -1,0 +1,34 @@
+.container {
+    background-color: #ddd;
+    width: 80%;
+    margin: 30px auto;
+
+    display: grid;
+    grid-template-rows: repeat(2, 150px);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    grid-auto-rows: 100px;
+    /* Try with dense and try without dense to see in action. using dense will make
+    any empty space that is created by the use of extending one column/row to multiple
+    grid areas get occupied*/
+    grid-auto-flow: row dense;
+    /* grid-auto-flow: row; */
+}
+
+
+.item {
+    padding: 20px;
+    color: #fff;
+    background-color: orangered;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+.item--4 {
+    grid-column: 1 / span 2;
+}
+

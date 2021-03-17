@@ -1,0 +1,38 @@
+.container {
+    background-color: #ddd;
+    width: 80%;
+    margin: 30px auto;
+
+    display: grid;
+    grid-template-rows: repeat(2, 150px);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    /* Aligning grid items in their grid area */
+    /* Aligning vertically values => start, end, center, stretch. strech is the default.*/
+    align-items: center;
+    /* Horizontally align grid items. It has the same possible values as align-items */
+    justify-items: center;
+}
+
+
+.item {
+    padding: 20px;
+    color: #fff;
+    background-color: orangered;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+.item--4 {
+    /* Aligning a single grid item on the vertical axis*/
+    align-self: start;
+    /* Aligning a single grid item on the vertical axis*/
+    justify-self: end;
+
+    /* Possible values for both are => stretch, start, end, center.
+    The default is set to stretch*/
+}
