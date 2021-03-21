@@ -1,0 +1,68 @@
+.container {
+    background-color: #ddd;
+    width: 80%;
+    margin: 30px auto;
+
+    display: grid;
+    grid-template-rows: repeat(2, 150px);
+    grid-template-columns: repeat(4, 1fr);
+
+     /* Using max-content: will make the column as wide as it wanna be to fit
+     the largest content. Max-content also trys not to make any line breaks*/
+     grid-template-columns: max-content repeat(3, 1fr);
+
+     /* Using min-content: will take the largest width to fit this content without
+     overflowing. It takes the largest content and make it the width of the column */
+     grid-template-columns: min-content repeat(3, 1fr);
+
+     /* The above principles applies the same for the rows */
+     /* The rows here will grow only to fit the content that is passed to them */
+     grid-template-rows: repeat(2, min-content);
+
+     /* Using the minmax function to specify the minimum and maximun width of a
+     column track the minimum and maximum height of a row track */
+    grid-template-rows: repeat(2, minmax(150px, min-content));
+    grid-template-columns: minmax(200px, 300px) repeat(3, 1fr);
+
+    grid-template-columns: minmax(200px, 50%) repeat(3, 1fr);
+    grid-template-columns: minmax(200px, 1fr) repeat(3, 1fr);
+
+    /* Note: A fractional unit fills up the remaining space of the entire container
+    but it is never smaller that the minimum content of a row or column */
+}
+
+
+.item {
+    padding: 20px;
+    color: #fff;
+    background-color: orangered;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.item--1 {
+    background-color: orangered;
+}
+.item--2 {
+    background-color: royalblue;
+}
+.item--3 {
+    background-color: goldenrod;
+}
+.item--4 {
+    background-color: yellowgreen;
+}
+.item--5 {
+    background-color: palevioletred;
+}
+.item--6 {
+    background-color: aqua;
+}
+.item--7 {
+    background-color: sienna;
+}
+.item--8 {
+    background-color: purple;
+}

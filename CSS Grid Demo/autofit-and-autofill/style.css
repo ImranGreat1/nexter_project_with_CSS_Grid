@@ -1,0 +1,72 @@
+.container {
+    background-color: #ddd;
+    width: 1000px;
+    margin: 30px auto;
+    width: 1000px;
+
+    display: grid;
+    /* 
+    // AUTO-FILL AND AUTOFILl
+    Instead of setting the numbers of rows we want, with auto-fill and auto-fit we can tell our
+    grid-container to fill the container with any number of grid-rows/grid-columns it can fit in
+    a grid track.
+    //Difference between auto-fill and auto-fit
+    ==> Auto-fill do not collapse the remaining grid-areas of the container if it has empty grid areas
+    that are not occupied by grid items.
+
+    ==> Auto-fit make the width of the remaining grid-areas that are empty to zero, it turns any
+    grid-areas without grid-items to zero. for example if we had a container with 1000px that fit
+    all 8 of our grid-areas that have the width of 100px each, the remaining 200px pixel of the
+    container which can fit two grid-areas will be trim by auto-fill since it has not grid-items
+    in it.
+    */
+
+    grid-template-rows: repeat(2, minmax(150px, 400px));
+    /* grid-template-columns: repeat(auto-fill, 100px);
+    grid-template-columns: repeat(auto-fit, 100px); */
+    grid-template-columns: repeat(auto-fit, 100px);
+
+    /* Making a great responsive design by using the auto-fit property */
+    width: 90%;
+    grid-template-rows: repeat(2, minmax(150px, min-content));
+    /* Using auto-fit and min-max() and making the max unit to 1fr will auto-matically share
+    the remaining available space to container among the grid areas*/
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: minmax(150px, min-content);
+}
+
+
+.item {
+    padding: 20px;
+    color: #fff;
+    background-color: orangered;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.item--1 {
+    background-color: orangered;
+}
+.item--2 {
+    background-color: royalblue;
+}
+.item--3 {
+    background-color: goldenrod;
+}
+.item--4 {
+    background-color: yellowgreen;
+}
+.item--5 {
+    background-color: palevioletred;
+}
+.item--6 {
+    background-color: aqua;
+}
+.item--7 {
+    background-color: sienna;
+}
+.item--8 {
+    background-color: purple;
+}
