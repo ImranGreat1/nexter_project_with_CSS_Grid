@@ -16,12 +16,68 @@ body {
   font-weight: 300;
   line-height: 1.6;
   color: #6D5D4B;
+  font-size: 1.6rem;
 }
 
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [side-start] 8rem [side-end full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
+}
+
+.heading-4, .heading-3, .heading-2, .heading-1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+}
+
+.heading-2 {
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1;
+}
+.heading-2--dark {
+  color: #54483A;
+}
+.heading-2--light {
+  color: #f9f7f6;
+}
+
+.heading-3 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: #c69963;
+}
+
+.heading-4 {
+  font-size: 1.9rem;
+}
+.heading-4--dark {
+  color: #54483A;
+}
+.heading-4--light {
+  color: #f9f7f6;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #c69963;
+  font-size: 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #f9f7f6;
+  padding: 1.7rem 3rem;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn:hover {
+  background-color: #B28451;
+}
+
+.mb-sm {
+  margin-bottom: 1.5rem;
 }
 
 .sidebar {
@@ -41,10 +97,31 @@ body {
 }
 
 .features {
-  background-color: #f9f7f6;
   grid-column: center-start/center-end;
+  padding: 15rem 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 4rem;
+  align-items: start;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+.feature__icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  fill: #c69963;
+  /* We can only use the -1 to span to the end when we explicitly
+  set the row/column */
+  grid-row: 1/span 2;
+  transform: translateY(-1rem);
+}
+.feature__text {
+  font-size: 1.7rem;
 }
 
 .story__pictures {
@@ -52,8 +129,23 @@ body {
   grid-column: full-start/col-end 4;
 }
 .story__content {
-  background-color: #101d2c;
+  background-color: #f9f7f6;
   grid-column: col-start 5/full-end;
+  padding: 6rem 7vw;
+  /*
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  */
+  display: grid;
+  align-content: center;
+  justify-items: start;
+}
+.story__text {
+  font-size: 1.6rem;
+  font-style: italic;
+  margin: 2.5rem 0;
 }
 
 .homes {

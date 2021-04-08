@@ -1,7 +1,37 @@
 .features {
-    background-color: $color-grey-light-1;
+
     grid-column: center-start / center-end;
+    padding: 15rem 0;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    // Responsive design without using media queries
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 4rem;
+    align-items: start;
+}
+
+
+.feature {
+
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    column-gap: 2rem;
+    row-gap: 1rem;
+
+
+    &__icon {
+        width: 4.5rem;
+        height: 4.5rem;
+        fill: $color-primary;
+
+        /* We can only use the -1 to span to the end when we explicitly
+        set the row/column */
+        grid-row: 1 / span 2;
+        transform: translateY(-1rem);
+    }
+
+
+    &__text {
+        font-size: 1.7rem;
+    }
 }
