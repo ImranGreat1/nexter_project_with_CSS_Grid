@@ -8,7 +8,7 @@ CSS Grid is a new module that brings two-dimensional grid system to CSS for the 
 
 * **Grid Track** => This is the space between two grid lines or two grid columns. 
 
-* **Grid area** => This is the area between two vertical and two horizontal gird lines.
+* **Grid area** => This is the area between two vertical and two horizontal grid lines.
 
 * **Grid cell** => This is the area between two adjacent grid lines and two adjacent column lines.
 

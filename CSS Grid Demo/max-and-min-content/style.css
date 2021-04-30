@@ -20,7 +20,7 @@
      grid-template-rows: repeat(2, min-content);
 
      /* Using the minmax function to specify the minimum and maximun width of a
-     column track the minimum and maximum height of a row track */
+     column track and the minimum and maximum height of a row track */
     grid-template-rows: repeat(2, minmax(150px, min-content));
     grid-template-columns: minmax(200px, 300px) repeat(3, 1fr);
 

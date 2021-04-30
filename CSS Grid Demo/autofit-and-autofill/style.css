@@ -7,8 +7,8 @@
     display: grid;
     /* 
     // AUTO-FILL AND AUTOFILl
-    Instead of setting the numbers of rows we want, with auto-fill and auto-fit we can tell our
-    grid-container to fill the container with any number of grid-rows/grid-columns it can fit in
+    Instead of setting the numbers of rows/columns we want, with auto-fill and auto-fit we can tell
+    our grid-container to fill the container with any number of grid-rows/grid-columns it can fit in
     a grid track.
     //Difference between auto-fill and auto-fit
     ==> Auto-fill do not collapse the remaining grid-areas of the container if it has empty grid areas
